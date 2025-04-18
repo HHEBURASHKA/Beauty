@@ -1,0 +1,56 @@
+﻿<Window x:Class="BeautyShop.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:BeautyShop"
+        mc:Ignorable="d"
+        Title="Beauty Shop" Height="500" Width="800">
+
+    <DockPanel>
+        <!-- Меню слева -->
+        <StackPanel Background="#FFB6C1" Width="200" DockPanel.Dock="Left">
+            <Button Content="Вход" Click="Login_Click" Margin="10"/>
+            <Button Content="Регистрация" Click="Register_Click" Margin="10"/>
+            <Button Content="Услуги" Click="Services_Click" Margin="10"/>
+            <Button Content="Мастера" Click="Masters_Click" Margin="10"/>
+            <Button Content="Запись" Click="Booking_Click" Margin="10"/>
+        </StackPanel>
+
+        <!-- Контент справа -->
+        <Grid Margin="10" RenderTransformOrigin="1.003,0.502" Width="873">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="300" />
+            </Grid.ColumnDefinitions>
+
+            <!-- Информация о салоне -->
+            <StackPanel Grid.Column="0" Margin="10">
+                <TextBlock Text="О Салоне" 
+                           FontSize="20" 
+                           FontWeight="Bold" 
+                           Margin="0,0,0,10"/>
+
+                <TextBlock Text="Добро пожаловать в Beauty Shop — место, где красота и комфорт сочетаются с профессионализмом. Мы предлагаем широкий спектр услуг от опытных мастеров." 
+                           FontSize="14" 
+                           TextWrapping="Wrap" 
+                           Margin="0,0,0,10"/>
+
+                <TextBlock Text="Наш адрес: пгт. Верхняя Синячиха, ул. Октябрьская, 25" 
+                           FontSize="14" 
+                           TextWrapping="Wrap" 
+                           Margin="0,0,0,10"/>
+
+                <TextBlock Text="Номер для связи: +7(965)318-05-50" 
+                           FontSize="14" 
+                           TextWrapping="Wrap" 
+                           Margin="0,0,0,10"/>
+
+                <Image Source="Beauty\salon.jpg" 
+                       Height="300" 
+                       Stretch="UniformToFill" 
+                       Margin="0,10,0,0"/>
+            </StackPanel>
+        </Grid>
+    </DockPanel>
+</Window>
